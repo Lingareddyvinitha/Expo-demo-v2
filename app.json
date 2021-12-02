@@ -1,11 +1,16 @@
 {
   "expo": {
     "name": "my-project",
-    "slug": "my-project",
+    "icon": "https://assets.ccbp.in/frontend/hooks/emojis-search/grinning-face-with-big-eyes-img.png",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  },
-  "name": "my-project"
+    "slug": "my-project",
+    "ios": {
+      "bundleIdentifier": "com.kento.learn",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.kento.learn",
+      "versionCode": 1
+    }
+  }
 }
