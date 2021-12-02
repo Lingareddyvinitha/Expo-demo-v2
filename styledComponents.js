@@ -16,7 +16,7 @@ export const Title = styled(Typo16BlackPoppins)`
   font-size: 43px;
 `;
 
-export const Button = styled.TouchableOpacity`
+export const ButtonWithOpacity = styled.TouchableOpacity`
   border: none;
    cursor: pointer;
    margin: 4px;

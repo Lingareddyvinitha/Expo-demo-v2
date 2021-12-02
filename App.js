@@ -1,9 +1,9 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, TextInput } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, TextInput, Button } from 'react-native';
 import { BlurView } from 'expo-blur';
 
 import AddIcon from './common/icons/AddIcon'
-import { Container, Title, Button, ButtonText, ImageElement } from './styledComponents'
+import { Container, Title, ButtonWithOpacity, ButtonText, ImageElement } from './styledComponents'
 
 
 
@@ -16,17 +16,17 @@ const App = () => {
     <>
 
       <Container>
-        <BlurView intensity={100} style={styles.blurContainer}>
+        <BlurView intensity={80} style={styles.blurContainer}>
           <Title>Hello</Title>
         </BlurView>
 
         <ImageElement source={{ uri: 'https://assets.ccbp.in/frontend/hooks/emojis-search/grinning-face-with-big-eyes-img.png' }} />
         <AddIcon />
-        <Button
+        <ButtonWithOpacity
           onPress={() => alert('Hello, world!')}
         >
           <ButtonText>Pick a photo</ButtonText>
-        </Button>
+        </ButtonWithOpacity>
       </Container>
       <SafeAreaView>
         <TextInput style={styles.input} onChangeText={onChangeText} value={text} />
@@ -37,6 +37,7 @@ const App = () => {
           placeholder="useless placeholder"
           keyboardType="numeric"
         />
+        <Button title="Left button" onPress={() => alert('Left button pressed')} />
       </SafeAreaView>
     </>
   );
